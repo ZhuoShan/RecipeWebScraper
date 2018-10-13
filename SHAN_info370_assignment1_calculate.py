@@ -12,7 +12,7 @@ import pandas as pd
 
 # a calculator function that get the names, counts and proportions of top 10 most used ingredients
 def calculatorMain():
-    rawData = pd.read_csv('SHAN_info370_assignment1_clean.csv', index_col=0)
+    rawData = pd.read_csv('SHAN_info370_assignment1_cleanData.csv', index_col=0)
     rawCopy = rawData.copy()
     # get top 10 most used ingredients' names
     mostIngredients = rawCopy['Ingredients'].value_counts()[0:10].index.tolist()

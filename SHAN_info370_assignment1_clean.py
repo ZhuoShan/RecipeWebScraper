@@ -69,5 +69,5 @@ def cleanerMain():
     # remove all preping method
     rawCopy = prepRemover(rawCopy)
     # export to csv file
-    rawCopy.to_csv('SHAN_info370_assignment1_clean.csv')
+    rawCopy.to_csv('SHAN_info370_assignment1_cleanData.csv')
 
