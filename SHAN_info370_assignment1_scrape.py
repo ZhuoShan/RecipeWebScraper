@@ -74,12 +74,8 @@ def scraperMain(mainURL, secondURL):
     secondList = pageURLScraper(secondURL)
     pageList = mainList + secondList
     ingredientsFrame = pd.DataFrame()
-    allNames = pd.DataFrame()
-    allURL = pd.DataFrame()
     for each in pageList:
         curNames, curLists = nameURLScraper(each)
-        allNames = allNames.append(curNames)
-        allURL = allURL.append(curLists)
         for i in range(0, len(curLists)-1):
             curIngredients = ingredientScraper(curLists[i])
             ingredientsFrame = ingredientsFrame.append(
